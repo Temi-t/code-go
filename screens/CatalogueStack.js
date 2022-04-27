@@ -36,7 +36,7 @@ const SettingScreen = ({navigation}) => {
 
 
 
-export default function Catalogue (){
+export default function CatalogueStack (){
   const Stack = createStackNavigator();
   return(
      <Stack.Navigator screenOptions={{headerShown: false}}> 

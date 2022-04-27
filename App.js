@@ -1,13 +1,18 @@
 import 'react-native-gesture-handler';
-//import AppNavStack from './AppNavStack';
-import HomeTab from './HomeTab';
+import React from 'react';
+import AuthContextProvider from './AuthContextProvider';
+//import HomeTab from './HomeTab';
+import AppNavigator from './AppNavigator';
 import { NavigationContainer } from '@react-navigation/native'
+
+
 export default function App() {
   return (
-    <NavigationContainer>
-      <HomeTab />
-    </NavigationContainer>
+    <AuthContextProvider >
+      <NavigationContainer>
+        <AppNavigator />
+      </NavigationContainer>
+    </AuthContextProvider>
   );
 }
 
-      //<AppNavStack/>

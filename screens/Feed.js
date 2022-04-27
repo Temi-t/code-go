@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../AuthContextProvider';
 import { StyleSheet, Text, View, Button } from 'react-native';
 //import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
@@ -6,9 +7,14 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function Feed () {
   const nav = useNavigation();
+  const { setUser } = useContext(AuthContext);
   return(
     <View style={styles.container}>
       <Text>Hello there Feed Screen 😵‍💫</Text>
+      <Button
+        title="logout"
+        onPress={()=>{setUser(false)}}
+      ></Button>
       <Button  title='Go to Catalogue'
         onPress={()=>nav.navigate('Cat')}
         >

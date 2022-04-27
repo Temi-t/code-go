@@ -1,6 +1,6 @@
 import React from 'react';
 import Feed from './screens/Feed';
-import Catalogue from './screens/Catalogue.js';
+import CatalogueStack from './screens/CatalogueStack.js';
 //import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -10,7 +10,7 @@ export default function HomeTab (){
   return(
     <BottomTab.Navigator>
       <BottomTab.Screen name="Feed" component={Feed}/>
-      <BottomTab.Screen name="Cat" component={Catalogue}/>
+      <BottomTab.Screen name="CatStack" component={CatalogueStack}/>
     </BottomTab.Navigator>
   )
 }
